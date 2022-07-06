@@ -7,6 +7,12 @@
     <title>Index</title>
   </head>
   <body>
+    <% if (locals.fileLink != null) { %>
+    <div style="margin-bottom: 1rem">
+      Your file is uploaded
+      <a href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+    </div>
+    <% } %>
     <h1>FileFly</h1>
     <form
       action="/upload"

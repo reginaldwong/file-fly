@@ -19,4 +19,4 @@ const File = new mongoose.Schema({
 });
 
 // Create table in database called "File" using the File schema
-mongoose.exports = mongoose.model('File', File);
+module.exports = mongoose.model('File', File);
