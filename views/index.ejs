@@ -8,13 +8,13 @@
     <!-- <link rel="stylesheet" href="/dist/output.css" /> -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1 class="text-3xl my-5 flex justify-center">FileFly</h1>
-    <div class="max-w-md mx-auto p-8 bg-teal-500 rounded">
+  <body class="h-screen bg-gray-200">
+    <h1 class="text-5xl my-5 flex justify-center text-gray-800">FileFly</h1>
+    
+    <div class="max-w-md mx-auto p-12 bg-sky-700 rounded-md drop-shadow-xl border-2 border-sky-900">
       <form action="/upload" method="POST" enctype="multipart/form-data">
         <div class="form-entry mb-5">
-          <!-- <label for="file">Attach file</label>
-          <input type="file" id="file" name="file" required /> -->
+
           <div class="max-w-xl">
             <label
               for="file"
@@ -48,22 +48,30 @@
               />
             </label>
           </div>
-        </div>
-        <div class="form-entry mb-5">
-          <label for="password">Password</label><br />
-          <input type="password" id="password" name="password" />
+
+          
+
+        <div class="form-entry my-5">
+          <label for="password" class="text-slate-100">Password <span class="text-zinc-400">(recommended)</span></label><br />
+          <input type="password" id="password" name="password" class="w-full rounded pl-2 my-3 border-2 border-zinc-400 focus:border-sky-400" />
         </div>
         <button
           type="submit"
-          class="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-full"
+          class="w-full px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-medium rounded-full"
         >
-          Share
+          Upload File & Generate Link
         </button>
 
         <% if (locals.fileLink != null) { %>
-        <div class="my-5">
-          Your file is uploaded
-          <a href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+        <div class="my-5 text-slate-100">
+          Your file is successfully uploaded, use the link below
+          <a href="<%= locals.fileLink %>" id="uploadLink"><%= locals.fileLink %></a>
+           <button
+          onclick="copyLink()"
+          class="w-full px-4 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-full my-5"
+        >
+          Copy Link
+        </button>
         </div>
         <% } %>
       </form>
