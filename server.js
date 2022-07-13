@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const File = require('./models/File');
 const path = require('path');
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1/fileSharing';
 
 const express = require('express');
 const app = express();
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 // initialize multer library where all file uploads go into 'uploads' folder
 const upload = multer({ dest: 'uploads' });
 
-mongoose.connect(process.env.DB_URL);
+mongoose.connect(dbUrl);
 
 app.set('views', path.join(__dirname, 'views'));
 // SPECIFY DEFAULT VIEW ENGINE
