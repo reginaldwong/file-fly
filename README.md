@@ -1,6 +1,6 @@
 # uShare
 
-uShare is a full stack web application that allows users to transfer files between multiple devices (phone to phone, computer to tablet, tablet to phone, etc) by uploading a file and getting a generated URL that the user can send to the recipient. The user has the option to include a password that the recipient must input correctly in order to download the file. 
+uShare is a full stack web application that allows users to transfer files between multiple devices (phone to phone, computer to tablet, tablet to phone, etc) by uploading a file and getting a generated URL that the user can share. The user has the option to include a password that the recipient must input correctly in order to download the file. 
 
 This project was created using TailwindCSS on the front end and Node.js, Express, and MongoDB on the backend.
 
