@@ -1,16 +1,13 @@
 # uShare
 
-uShare is a full stack web application that lets users share files with others by uploading a file and getting a generated URL that the user can send to the recipient. The user has the option to upload a file with a password that the recipient must input correctly in order to download. 
+uShare is a full stack web application that allows users to transfer files between multiple devices (phone to phone, computer to tablet, tablet to phone, etc) by uploading a file and getting a generated URL that the user can send to the recipient. The user has the option to include a password that the recipient must input correctly in order to download the file. 
 
 This project was created using TailwindCSS on the front end and Node.js, Express, and MongoDB on the backend.
 
 # Features
 
-- Full CRUD functionality for campgrounds and campground reviews
-- Users can leave ratings and reviews on camprounds, with the option to edit or remove their review
-- Users can attach photos to the campgrounds they submit
-- Cluster map on the index page shows where the camps are located based on the coordinates of the location given by the user
-- Authentication and authorization put in place so that only registered users are allowed to create campgrounds and reviews and only the author of a campground is allowed to modify or delete their post.
+- Users can upload files and receive a URL in return which can be shared to others
+- Optionally, users can password protect their uploads so only recipients with the correct URL and password can download the file. 
 
 # Demo
 
